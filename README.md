@@ -1,5 +1,6 @@
 # vizuara-agents
 agentic library coded from scratch to perform safe(read only)  
+![SAMPLE RUN](Screenshot from 2025-12-09 15-51-51.png)
 
 # READ ME + FINAL REPORT 
 Code (single small package or single file): Agent class, tools, prompts, and utilities;  
