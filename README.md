@@ -12,9 +12,9 @@ actual.log: shows complete set up and run logs with debug errorsas well
 E. Reflection (≤ 300 words): Please find this in the report section of this README
 # REPORT 
 
-1. Research Evolution
-1.1 Initial Approach: Single-File Prompt
-Problem Encountered:
+1. Research Evolution  
+1.1 Initial Approach: Single-File Prompt  
+Problem Encountered:  
 
 Initially used a single prompt.txt file containing all instructions
 
@@ -47,8 +47,8 @@ Observation: <query-result-or-error>
 Answer: <final-natural-language-answer-based-on-sql-results>
 ```
 
-1.2 Improved Approach: Stage-Specific Prompts
-Solution Implemented:
+1.2 Improved Approach: Stage-Specific Prompts  
+Solution Implemented:  
 
 Hardcoded specific prompts within each individual stage of the ReACT loop
 
@@ -86,30 +86,30 @@ def execute_prompt(self, user_prompt: str):
         think = self._llm_call(user_prompt, think_context)
 ```
 
-2. #### SqliteAgent Class
+2. #### SqliteAgent Class  
 
-The main agent class implementing the ReACT loop with the following responsibilities:
+The main agent class implementing the ReACT loop with the following responsibilities:  
 
-- Database connection management
+- Database connection management  
     
-- Schema extraction and description
+- Schema extraction and description  
     
-- ReACT loop orchestration
+- ReACT loop orchestration  
     
-- Query validation and execution
+- Query validation and execution  
 
-## Tradeoffs
+## Tradeoffs  
 I chose hardcoded prompts over external configuration files to ensure tight integration between ReACT stages, accepting reduced customization flexibility for better context preservation.   
 
-For security, we implemented lightweight regex validation instead of full SQL parsing, trading comprehensive protection against complex injection attacks for minimal dependencies and faster execution.  Another thing i implemented is to ask llm to check whether it is movfing the table and if it is then halt immediatelyboth work satisfoctorily.
+For security, we implemented lightweight regex validation instead of full SQL parsing, trading comprehensive protection against complex injection attacks for minimal dependencies and faster execution.  Another thing i implemented is to ask llm to check whether it is movfing the table and if it is then halt immediatelyboth work satisfoctorily.  
 
- implicit context passing through prompt composition rather than explicit data structures, gaining simpler code flow at the cost of less control over intermediate representation.
+ implicit context passing through prompt composition rather than explicit data structures, gaining simpler code flow at the cost of less control over intermediate representation.  
 
-## Future Considerations
+## Future Considerations  
 
-1. we should prioritize **enhanced security** through SQL parsing libraries like sqlparse,
-2. Extending this via Kafka( so the LLM outputs in a kafka queue and a python program executes whatever is in this queue , hence if suddenly program is aborted we can still resume from where we left out)
-3. Accomodate long term memory by allowing user to write a small text file(example.txt) that encapsulates the long term context the user wants llm to remember between calls and this can be read by the program and passed to LLM ouput in every call .
+1. we should prioritize **enhanced security** through SQL parsing libraries like sqlparse,  
+2. Extending this via Kafka( so the LLM outputs in a kafka queue and a python program executes whatever is in this queue , hence if suddenly program is aborted we can still resume from where we left out)  
+3. Accomodate long term memory by allowing user to write a small text file(example.txt) that encapsulates the long term context the user wants llm to remember between calls and this can be read by the program and passed to LLM ouput in every call .  
 
 # SET UP 
 ```bash
