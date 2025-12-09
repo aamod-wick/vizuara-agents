@@ -1,4 +1,4 @@
-# vizuara-agents
+# vizuara-agents by AAMOD SARDESHPANDE
 agentic library coded from scratch to perform safe(read only)  
 ![SAMPLE RUN](img.png)
 
