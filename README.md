@@ -2,14 +2,17 @@
 agentic library coded from scratch to perform safe(read only)  
 
 # READ ME + FINAL REPORT 
-Code (single small package or single file): Agent class, tools, prompts, and utilities;
-within 350–400 LOC (excl. comments/docstrings).
-B. README (1 page): Purpose, how to run, tool list (arguments & returns), and a short
-example run with trace.
+Code (single small package or single file): Agent class, tools, prompts, and utilities;  
+1. db.py : to check the sample db , first run db.py to populate the database and sample
+2. sample.py : 
+to check how the agent is using the react template run , here only the react thought process is highlighted to avoid too much smudging 3.main.py : to actually run the project with complete error tracing and REACT chain
+within 350–400 LOC (excl. comments/docstrings).  
+B. README (1 page): Purpose, how to run, tool list (arguments & returns), and a short  
+example run with trace.  
 C. Tests (3–5): Please find the tests in /tests folder
-D. Trace Logs: please find this in /TraceLogs simple.log: simplified logs with only REACT Loop shown
-actual.log: shows complete set up and run logs with debug errorsas well
-E. Reflection (≤ 300 words): Please find this in the report section of this README
+D. Trace Logs: please find this in /TraceLogs simple.log: simplified logs with only REACT Loop shown  
+actual.log: shows complete set up and run logs with debug errorsas well  
+E. Reflection (≤ 300 words): Please find this in the report section of this README  
 # REPORT 
 
 1. Research Evolution  
